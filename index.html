@@ -11,7 +11,7 @@
     <script src="js/app.js"></script>
 
 </head>
-<body style="background:lightgray;" ng-app="ethicsApp" ng-controller="dataCtrl">
+<body ng-app="ethicsApp" ng-controller="dataCtrl">
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background:#428bca;">
     <div class="container-fluid" style="color:white;">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -48,7 +48,7 @@
 <div id="wrapper" style="background:gray;">
 
     <!-- Sidebar -->
-    <div id="sidebar-wrapper" style="background:lightgray;">
+    <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
                 <a href="#" class="heading_flex" style="color:black;">
@@ -57,10 +57,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" style="color:black;" ng-click="news1function()"> The News Feed - Part 1</a>
-            </li>
-            <li>
-                <a href="#" style="color:black;" ng-click="news2function()"> The News Feed - Part 2</a>
+                <a href="#" style="color:black;" ng-click="news1function()">News Feed</a>
             </li>
             <li>
                 <a href="#" style="color:black;" ng-click="beaconFunc()">Beacon</a>
@@ -84,8 +81,8 @@
     </div>
     </div>
 
-<div class="container" style="background:lightgray; margin-top:50px;">
-    <div class="row" style="margin-top:30px; background:white; padding: 20px;">
+<div class="container" style="margin-top:50px;">
+    <div class="row" style=" background:white; padding: 20px;">
         <div class="col-sm-push-2 col-sm-2">
             <button class="btn-danger btn " ng-click="updateStatus()">Update Your Status</button>
         </div>
@@ -97,10 +94,10 @@
             <input type="text" class="form-control" ng-model="statusUpdate" placeholder="What's on your mind?"/></div>
     </div>
 
-    <div class="row" ng-show="newsFeed1 === 'True'" style="background:white; margin-top:30px;">
+    <div class="row" ng-show="newsFeed1 === 'True'" style="background:white;">
 
         <div class="col-sm-12">
-            <h3>The News Feed - Part 1</h3>
+            <h3>The News Feed</h3>
         </div>
         <div class="col-sm-12">
             <ul>
@@ -125,35 +122,34 @@
 
 
             </ul>
+
+            <div class="comments">
+                <span style="color: rgb(59, 89, 152);">4 people</span> like this
+                <hr />
+                <ul>
+                    <li>Eventually forced an open letter response from CEO Mark Zuckerberg:</li>
+                    <li style="list-style: none;">
+                        <ul>
+                            <li>
+                                Facebook claims responsibility for not having created the proper privacy settings and creates a simpler privacy control panel
+
+                            </li>
+                            <li>
+                                Zuckerberg reminds users that the News Feed allowed protest groups to be highlighted
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        Outcome: News Feed never goes away
+                    </li>
+                </ul>
+                <input type="text" class="form-control" placeholder="Write a comment..." style="width: 98%"/>
+            </div>
         </div>
     </div>
-    <div class="row" style="background:white; margin-top:30px;" ng-show="newsFeed2 === 'True'">
 
-        <div class="col-sm-12" >
-            <h3>The News Feed - Part 2</h3>
-        </div>
-        <div class="col-sm-12">
-            <ul>
-                <li>Eventually forced an open letter response from CEO Mark Zuckerberg:</li>
-                <li style="list-style: none;">
-                    <ul>
-                        <li>
-                            Facebook claims responsibility for not having created the proper privacy settings and creates a simpler privacy control panel
-
-                        </li>
-                        <li>
-                            Zuckerberg reminds users that the News Feed allowed protest groups to be highlighted
-                        </li>
-                    </ul>
-
-                </li>
-                <li>
-                    Outcome: News Feed never goes away
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="row" ng-show="beacon === 'True'" style="background:white; margin-top:30px;">
+    <div class="row" ng-show="beacon === 'True'" style="background:white; ">
 
         <div class=" col-sm-12">
             <h3>Beacon - 2007</h3>
@@ -195,7 +191,7 @@
         </div>
     </div>
 
-    <div class="row" ng-show="personalize === 'True'" style="background:white;margin-top:30px;">
+    <div class="row" ng-show="personalize === 'True'" style="background:white;">
 
         <div class=" col-sm-12">
             <h3>Instant Personalization - 2010 </h3>
@@ -220,7 +216,7 @@
             </ul>
         </div>
     </div>
-    <div class="row" ng-show="button === 'True'" style="background:white;margin-top:30px;">
+    <div class="row" ng-show="button === 'True'" style="background:white;">
 
         <div class="col-sm-12">
             <h3>Like Button Plug-in - 2010 </h3>
@@ -259,7 +255,7 @@
             </ul>
         </div>
     </div>
-    <div class="row" ng-show="recog === 'True'" style="background:white;margin-top:30px;">
+    <div class="row" ng-show="recog === 'True'" style="background:white;">
 
         <div class="col-sm-12" >
             <h3>Facebook Recognition - 2012 </h3>
@@ -287,7 +283,7 @@
             </ul>
         </div>
     </div>
-    <div class="row" ng-show="psychology === 'True'" style="background:white;margin-top:30px;">
+    <div class="row" ng-show="psychology === 'True'" style="background:white;">
 
         <div class="col-sm-12">
             <h3>Psychological Testing - 2012 </h3>
@@ -325,7 +321,7 @@
             </ul>
         </div>
     </div>
-    <div class="row" style="margin-bottom: 30px; background:white;margin-top:30px;" ng-show="conclusion === 'True'" >
+    <div class="row" style="margin-bottom: 30px; background:white;" ng-show="conclusion === 'True'" >
 
         <div class=" col-sm-12">
             <h3>Conclusion</h3>
@@ -341,27 +337,27 @@
             </ul>
         </div>
     </div>
-    <div class="row" style="margin-top:30px; background:white;" ng-repeat="status in statusArray">
+    <div class="row" style=" background:white;" ng-repeat="status in statusArray">
         <div class=" col-sm-12">
             <h3>Facebook Project Group - <span style="font-size:10px; color:gray;">Just Now</span> </h3><p>{{status}}</p>
         </div>
     </div>
-    <div class="row" style="margin-top:30px; background:white;">
+    <div class="row" style=" background:white;">
         <div class=" col-sm-12">
             <h3>Duke Ayers - <span style="font-size:10px; color:gray;">Just Now</span> </h3><p>How about that AngularJS, like... OMG.</p>
         </div>
     </div>
-    <div class="row" style="margin-top:30px; background:white;">
+    <div class="row" style=" background:white;">
         <div class=" col-sm-12">
             <h3>Ryan Batchelder - <span style="font-size:10px; color:gray;">Three Minutes Ago</span> </h3><p>Man, Duke is just the coolest!</p>
         </div>
     </div>
-    <div class="row" style="margin-top:30px; background:white;">
+    <div class="row" style=" background:white;">
         <div class=" col-sm-12">
             <h3>Tory Bottiglieri - <span style="font-size:10px; color:gray;">Five Minutes Ago</span> </h3><p>I sure am glad that Duke didn't put this post up for me, he is pretty cool though.</p>
         </div>
     </div>
-    <div class="row" style="margin-top:30px; background:white;">
+    <div class="row" style=" background:white;">
         <div class=" col-sm-12">
             <h3>Chris Heiser - <span style="font-size:10px; color:gray;">Ten Minutes Ago</span> </h3><p>Lol, just watched Duke type up Tory's status. Duke is seriously the coolest.</p>
         </div>
