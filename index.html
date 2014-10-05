@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
@@ -11,137 +12,6 @@
 
 </head>
 <body style="background:lightgray;" ng-app="ethicsApp" ng-controller="dataCtrl">
-<style>
-    .navbar li a{
-        color:white;
-    }
-    .container{
-        min-height: 800px;
-    }
-    /*!
-     * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
-     * Code licensed under the Apache License v2.0.
-     * For details, see http://www.apache.org/licenses/LICENSE-2.0.
-     */
-
-    /* Toggle Styles */
-
-    #wrapper {
-        padding-left: 0;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-    }
-
-    #wrapper.toggled {
-        padding-left: 250px;
-    }
-
-    #sidebar-wrapper {
-        z-index: 1000;
-        position: fixed;
-        left: 250px;
-        width: 0;
-        height: 100%;
-        margin-left: -250px;
-        overflow-y: auto;
-        background: #000;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 250px;
-    }
-
-    #page-content-wrapper {
-        width: 100%;
-        padding: 15px;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: absolute;
-        margin-right: -250px;
-    }
-
-    /* Sidebar Styles */
-
-    .sidebar-nav {
-        position: absolute;
-        top: 0;
-        width: 250px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .sidebar-nav li {
-        text-indent: 20px;
-        line-height: 40px;
-    }
-
-    .sidebar-nav li a {
-        display: block;
-        text-decoration: none;
-        color: #999999;
-    }
-
-    .sidebar-nav li a:hover {
-        text-decoration: none;
-        color: #fff;
-        background: rgba(255,255,255,0.2);
-    }
-
-    .sidebar-nav li a:active,
-    .sidebar-nav li a:focus {
-        text-decoration: none;
-    }
-
-    .sidebar-nav > .sidebar-brand {
-        height: 65px;
-        font-size: 18px;
-        line-height: 60px;
-    }
-
-    .sidebar-nav > .sidebar-brand a {
-        color: #999999;
-    }
-
-    .sidebar-nav > .sidebar-brand a:hover {
-        color: #fff;
-        background: none;
-    }
-
-    @media(min-width:768px) {
-        #wrapper {
-            padding-left: 250px;
-        }
-
-        #wrapper.toggled {
-            padding-left: 0;
-        }
-
-        #sidebar-wrapper {
-            width: 250px;
-        }
-
-        #wrapper.toggled #sidebar-wrapper {
-            width: 0;
-        }
-
-        #page-content-wrapper {
-            padding: 20px;
-        }
-
-        #wrapper.toggled #page-content-wrapper {
-            position: relative;
-            margin-right: 0;
-        }
-    }
-</style>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background:#428bca;">
     <div class="container-fluid" style="color:white;">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -167,10 +37,10 @@
                 <button type="submit" class="btn btn-default" style="color:black;">Search</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li ><a href="#" style="color:white;">Duke</a></li>
-                <li><a href="#" style="color:white;">Tory</a></li>
-                <li><a href="#" style="color:white;">Ryan</a></li>
-                <li><a href="#" style="color:white;">Chris</a></li>
+                <li ><a href="#" style="color:white;">Duke</a><div class="profile_img" style="background: url(img/duke.jpg) no-repeat;"></div></li>
+                <li><a href="#" style="color:white;">Tory</a><div class="profile_img" style="background: url(img/tory.jpg) no-repeat;"></div></li>
+                <li><a href="#" style="color:white;">Ryan</a><div class="profile_img" style="background: url(img/ryan.jpg) no-repeat;"></div></li>
+                <li><a href="#" style="color:white;">Chris</a><div class="profile_img" style="background: url(img/chris.jpg) no-repeat;"></div></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -181,7 +51,8 @@
     <div id="sidebar-wrapper" style="background:lightgray;">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                <a href="#" style="color:black;">
+                <a href="#" class="heading_flex" style="color:black;">
+                    <div class="profile_img" style="background: url(img/F_icon.svg) no-repeat; background-size: 40px; padding-right: 45px;"></div>
                     Facebook Privacy Issues
                 </a>
             </li>
